@@ -57,8 +57,8 @@ class VideoPlayerExample extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             _BumbleBeeRemoteVideo(),
-            _ButterFlyAssetVideo(),
-            _ButterFlyAssetVideoInList(),
+            _DogsAssetVideo(),
+            _DogsAssetVideoInList(),
           ],
         ),
       ),
@@ -66,7 +66,7 @@ class VideoPlayerExample extends StatelessWidget {
   }
 }
 
-class _ButterFlyAssetVideoInList extends StatelessWidget {
+class _DogsAssetVideoInList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -90,7 +90,7 @@ class _ButterFlyAssetVideoInList extends StatelessWidget {
                   alignment: FractionalOffset.bottomRight +
                       const FractionalOffset(-0.1, -0.1),
                   children: <Widget>[
-                    _ButterFlyAssetVideo(),
+                    _DogsAssetVideo(),
                     Image.asset('assets/flutter-mark-square-64.png'),
                   ]),
             ],
@@ -144,18 +144,18 @@ class _ExampleCard extends StatelessWidget {
   }
 }
 
-class _ButterFlyAssetVideo extends StatefulWidget {
+class _DogsAssetVideo extends StatefulWidget {
   @override
-  _ButterFlyAssetVideoState createState() => _ButterFlyAssetVideoState();
+  _DogsAssetVideoState createState() => _DogsAssetVideoState();
 }
 
-class _ButterFlyAssetVideoState extends State<_ButterFlyAssetVideo> {
+class _DogsAssetVideoState extends State<_DogsAssetVideo> {
   late VideoPlayerController _controller;
 
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/Butterfly-209.mp4');
+    _controller = VideoPlayerController.asset('assets/dogs.mp4');
 
     _controller.addListener(() {
       setState(() {});
@@ -396,7 +396,7 @@ class _PlayerVideoAndPopPageState extends State<_PlayerVideoAndPopPage> {
     super.initState();
 
     _videoPlayerController =
-        VideoPlayerController.asset('assets/Butterfly-209.mp4');
+        VideoPlayerController.asset('assets/dogs.mp4');
     _videoPlayerController.addListener(() {
       if (startedPlaying && !_videoPlayerController.value.isPlaying) {
         Navigator.pop(context);
