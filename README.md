@@ -2,6 +2,14 @@
 
 Includes the example code from flutter documentation and from  various libraries in pubs.dev.
 
+## Building
+
+- get your keys in  lib/keys.dart file. See sample file in lib/keys_sample.dart file
+- git clone {repo}
+- cd repo
+- flutter pub get
+
+
 ## Flutter commands
 
 - flutter devices
